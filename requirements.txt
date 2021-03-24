@@ -1,0 +1,13 @@
+matplotlib==3.2.2
+MedPy==0.4.0
+numpy==1.18.5
+opencv-python==4.2.0.34
+pandas==1.2.1
+Pillow==7.1.2
+scikit-learn
+scipy
+SimpleITK==1.2.4
+tensorboard==2.2.2
+torch==1.7.1
+tqdm
+

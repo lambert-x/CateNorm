@@ -323,7 +323,7 @@ def get_args():
                         help='Use Whitening to preprocess images or not')
     parser.add_argument('--server', type=str, default='local',
                         help='change mappings for different servers')
-    parser.add_argument('--net', type=str, default='resunet',
+    parser.add_argument('--net', type=str, default='DNUnet',
                         help='choose network architecture')
     parser.add_argument('--fold', nargs='+', type=int, default=-1,
                         help='Choose the k-fold setting, default value:-1 means all 5 fold, otherwise choose the typed index folds '
@@ -361,15 +361,17 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-    data_dir = {'local': 'G:/Dataset/Prostate_Multi_384x384_clipped_CUHK',
-                'local-ABD-8': 'G:/Dataset/Abdominal_Multi_Site_8organs',
-                'local-ABD-6': 'G:/Dataset/Abdominal_Multi_Site_6organs_small_debug'
+    data_dir = {'local-prostate': 'G:/Dataset/Prostate_Multi_Site',
+                'local-ABD-8': 'G:/Dataset/Abdominal_Single_Site_8organs',
+                'local-ABD-6': 'G:/Dataset/Abdominal_Multi_Site_6organs',
                 }
 
-    save_dir = {'local': 'G:/SA-Net/',
-                'local-ABD-8': 'G:/SA-Net/',
-                'local-ABD-6': 'G:/SA-Net/'
+    save_dir = {'local-prostate': 'G:/DualNorm-Unet/',
+                'local-ABD-8': 'G:/DualNorm-Unet/',
+                'local-ABD-6': 'G:/DualNorm-Unet/',
                 }
+
+
     data_root = data_dir[args.server]
     output_root = save_dir[args.server]
     print('Dataset Path:', data_root)
@@ -396,7 +398,7 @@ if __name__ == '__main__':
 
     site_num = len(all_list.keys())
 
-    if args.net == 'resunet':
+    if args.net == 'DNUnet':
         net = DualNorm_Unet(n_channels=3, n_classes=args.n_classes, bilinear=False, batchsize=args.batchsize // site_num,
                             nonlinear=args.nonlinear, norm_type=args.norm_type, spade_seg_mode=args.spade_seg_mode,
                             spade_aux_blocks=args.spade_aux_blocks)
