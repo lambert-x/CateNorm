@@ -108,8 +108,8 @@ Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your 
    ```
    All the predictions are saved as `.nii` files in the `prediction_nii` folder e.g., `G:/DualNorm-Unet/prediction_nii`.
    
- 
- ###Reference:
+   
+### Reference:
 - https://github.com/milesial/Pytorch-UNet
 - https://github.com/liuquande/MS-Net
  
