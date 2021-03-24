@@ -99,7 +99,8 @@ Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your 
    ```
    
 ## Testing
-4. To evaluate the model and save predictions, run:
+
+To evaluate the model and save predictions, run:
    ```shell
    python test.py  --save-fold=Prostate-Multi-ABC-Test --batch-size=4 --aug=True --server=local-prostate \
    --gpu=0 --sitename ABC --save-lastbest=True --eval-site=ABC --norm-type=BN --n-classes=2 --eval-freq=2 \
