@@ -1,7 +1,7 @@
 # DualNorm-Unet
 
 
-### Install/Check dependencies:
+## Install/Check dependencies:
    ```shell
     pip install requirements.txt
    ```
