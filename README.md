@@ -6,20 +6,20 @@
     pip install requirements.txt
    ```
 ## Prepare Dataset
-### Download dataset
+### 1. Download dataset
 1. Prostate: We use the preprocessed [multi-site dataset for prostate MRI segmentation.](https://liuquande.github.io/SAML/)
 2. Abdominal: We use the [BTCV](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480) and [TCIA](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) datasets. 
 For single domain(site) experiments, we directly use BTCV with the official annotations.
 For multiple domain(site) experiments, we use the annotation published in [here.](https://zenodo.org/record/1169361#.YFqGYK_0lm_)
 
-### Preprocess data
+### 2. Preprocess data
 1. Prostate: Datasets have already been preprocessed.
 2. Abdominal: There are two jupyter notebooks in `./preprocess` for preprocessing data with different settings.
-### Generate text file for each site
+### 3. Generate text file for each site
 Each site-wise folder needs a text file(all_list.txt) including paths of all cases.
 `data_list_generator.ipynb` is offered to help you generate.
 
-### Overview of a dataset folder
+### 4. Overview of a dataset folder
 A dataset folder should look like this:
 
     Dataset/Prostate_Multi/
@@ -47,7 +47,7 @@ A dataset folder should look like this:
     │   ├── Case01_segmentation.nii.gz
     │   ...
     │
-### Set up the data and result paths 
+### 5. Set up the data and result paths 
 Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your own configuration.
    ```shell
     data_dir = {'local-prostate': 'G:/Dataset/Prostate_Multi_Site',
