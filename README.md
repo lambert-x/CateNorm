@@ -1,11 +1,11 @@
 # DualNorm-Unet
 
 
-#### Install/Check dependencies:
+### Install/Check dependencies:
    ```shell
     pip install requirements.txt
    ```
-   
+### Prepare Dataset
 #### Download dataset
 1. Prostate: We use the preprocessed [multi-site dataset for prostate MRI segmentation.](https://liuquande.github.io/SAML/)
 2. Abdominal: We use the [BTCV](https://www.synapse.org/#!Synapse:syn3193805/wiki/89480) and [TCIA](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT) datasets. 
@@ -61,7 +61,7 @@ Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your 
                 }
    ```
 
-#### Training
+### Training
 1. Baseline (single site): 
     
    ```shell
@@ -98,7 +98,7 @@ Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your 
    --loaded-model-name=model_last --spade-aux-blocks inc down1 down2 down3
    ```
    
-#### Testing
+### Testing
 4. To evaluate the model and save predictions, run:
    ```shell
    python test.py  --save-fold=Prostate-Multi-ABC-Test --batch-size=4 --aug=True --server=local-prostate \
