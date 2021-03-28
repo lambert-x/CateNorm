@@ -67,45 +67,39 @@ Please modify `"data_dir"` and `"save_dir"` in `train.py` & `test.py` with your 
    ```shell
    # Here we use prostate site A as an example
    
-   python train.py  --save-fold=Prostate-Single-A --batch-size=4 --aug=True --server=local-prostate \
-   --gpu=0 --sitename A --save-lastbest=True --eval-site=A --norm-type=BN --n-classes=2 --eval-freq=2 
+   python train.py  --save-fold=Prostate-Single-A --batch-size=4 --sitename A --epochs=20
    ```
 2. Baseline (Multiple site): 
     
    ```shell
    # Here we use prostate sites A,B,C as an example
    
-   python train.py  --save-fold=Prostate-Multi-ABC --batch-size=4 --aug=True --server=local-prostate \
-    --gpu=0 --sitename ABC --save-lastbest=True --eval-site=ABC --norm-type=BN --n-classes=2 --eval-freq=2 
+   python train.py  --save-fold=Prostate-Multi-ABC --batch-size=6 --sitename ABC --epochs=20
    ```
 3. Load Pretraining Model
    ```shell
    # Here we use prostate sites A,B,C as an example
    
-   python train.py  --save-fold=Prostate-Multi-ABC-Pretrained --batch-size=4 --aug=True --server=local-prostate \
-   --gpu=0 --sitename ABC --save-lastbest=True --eval-site=ABC --norm-type=BN --n-classes=2 --eval-freq=2 \
-   --load=G:/DualNorm-Unet/checkpoints/xxx/xxx/Epochs_10_Aug_True_Zoom_False_Nonlinear_relu_Norm_BN \
-   --loaded-model-name=model_last
+   python train.py  --save-fold=Prostate-Multi-ABC-Pretrained --batch-size=6 --sitename ABC --epochs=10 \
+   --load=G:/DualNorm-Unet/checkpoints/xxx/xxx/Epochs_10_Aug_True_Zoom_False_Nonlinear_relu_Norm_BN
    ```
 3. DualNorm-Unet : 
     
    ```shell
    # Here we use prostate sites A,B,C with DualNorm blocks 1-4(inc, down1, down2, down3) as an example
    
-   python train.py  --save-fold=Prostate-Multi-ABC-Pretrained --batch-size=4 --aug=True --server=local-prostate \
-   --gpu=0 --sitename ABC --save-lastbest=True --eval-site=ABC --norm-type=BN --n-classes=2 --eval-freq=2 \
+   python train.py  --save-fold=Prostate-Multi-ABC-Pretrained --batch-size=6 --sitename ABC --epochs=10 \
    --load=G:/DualNorm-Unet/checkpoints/xxx/xxx/Epochs_10_Aug_True_Zoom_False_Nonlinear_relu_Norm_BN \
-   --loaded-model-name=model_last --spade-aux-blocks inc down1 down2 down3
+   --spade-aux-blocks inc down1 down2 down3
    ```
    
 ## Testing
 
 To evaluate the model and save predictions, run:
    ```shell
-   python test.py  --save-fold=Prostate-Multi-ABC-Test --batch-size=4 --aug=True --server=local-prostate \
-   --gpu=0 --sitename ABC --save-lastbest=True --eval-site=ABC --norm-type=BN --n-classes=2 --eval-freq=2 \
+   python test.py  --save-fold=Prostate-Multi-ABC-Test --batch-size=6 --sitename ABC \
    --load=G:/DualNorm-Unet/checkpoints/xxx/xxx/Epochs_10_Aug_True_Zoom_False_Nonlinear_relu_Norm_BN \
-   --loaded-model-name=model_last --save-prediction=True
+   --save-prediction=True
    ```
    All the predictions are saved as `.nii` files in the `prediction_nii` folder e.g., `G:/DualNorm-Unet/prediction_nii`.
    

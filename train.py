@@ -638,13 +638,13 @@ def get_args():
     parser.add_argument('--gpu', type=str, default='0', help='train or test or guide')
     parser.add_argument('--save-folder', type=str, default='',
                         help='the output folder under the output directory to save checkpoints and logs')
-    parser.add_argument('--aug', type=str2bool, default=False,
+    parser.add_argument('--aug', type=str2bool, default=True,
                         help='Use Image augmentation (shift and rotation) or not')
     parser.add_argument('--zoom', type=str2bool, default=False,
                         help='Use Image augmentation (random zoom then center crop) or not')
     parser.add_argument('--whitening', type=str2bool, default=True,
                         help='Use Whitening to preprocess images or not')
-    parser.add_argument('--server', type=str, default='local', help='change mappings for different servers')
+    parser.add_argument('--server', type=str, default='local-prostate', help='change mappings for different servers')
     parser.add_argument('--net', type=str, default='DNUnet',
                         help='choose network architecture')
     parser.add_argument('--fold', nargs='+', type=int, default=-1,
@@ -655,8 +655,8 @@ def get_args():
     parser.add_argument('--sitename', nargs='+', type=str, default=None)
     parser.add_argument('--n-classes', type=int, default=2,
                         help='the number of classes (including background)')
-    parser.add_argument('--save-lastbest', type=str2bool, default=False, help='only save the last or best checkpoints')
-    parser.add_argument('--eval-freq', type=int, default=5,
+    parser.add_argument('--save-lastbest', type=str2bool, default=True, help='only save the last or best checkpoints')
+    parser.add_argument('--eval-freq', type=int, default=2,
                         help='checkpoint saving frequency every epoch')
     parser.add_argument('--eval-site', type=str, default=None)
     parser.add_argument('--norm-type', type=str, default='BN',
@@ -669,7 +669,7 @@ def get_args():
                         help='select blocks for using auxilary spatially-adaptive normalization(SPADE)')
     parser.add_argument('--freeze-except', nargs='+', type=str, default=None,
                         help='keywords except for freezing ')
-    parser.add_argument('--loaded-model-name', type=str, default='model_best',
+    parser.add_argument('--loaded-model-name', type=str, default='model_last',
                         help='the file name of the model to be loaded')
     parser.add_argument('--ce-weighted', type=str2bool, default=False, help='whether use weighted Cross Entropy loss')
     parser.add_argument('--spade-reduction', type=int, default=2,
