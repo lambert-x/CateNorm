@@ -108,3 +108,13 @@ To evaluate the model and save predictions, run:
 - https://github.com/milesial/Pytorch-UNet
 - https://github.com/liuquande/MS-Net
  
+## Citations
+
+```bibtex
+@article{xiao2021dualnorm,
+  title={DualNorm-UNet: Incorporating Global and Local Statistics for Robust Medical Image Segmentation},
+  author={Xiao, Junfei and Yu, Lequan and Xing, Lei and Yuille, Alan and Zhou, Yuyin},
+  journal={arXiv},
+  year={2021}
+}
+```
