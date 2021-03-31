@@ -1,5 +1,4 @@
-# DualNorm-Unet
-
+# DualNorm-UNet: Incorporating Global and Local Statistics for Robust Medical Image Segmentation
 
 ## Install/Check dependencies:
    ```shell
