@@ -1,4 +1,4 @@
-# DualNorm-UNet: Incorporating Global and Local Statistics for Robust Medical Image Segmentation
+# CateNorm: Categorical Normalization for Robust Medical Image Segmentation
 
 ## Install/Check dependencies:
    ```shell
