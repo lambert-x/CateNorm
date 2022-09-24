@@ -1,5 +1,16 @@
 # CateNorm: Categorical Normalization for Robust Medical Image Segmentation
 
+## Paper
+This repository provides the official implementation of training Models Genesis as well as the usage of the pre-trained Models Genesis in the following paper:
+
+<b>CateNorm: Categorical Normalization for Robust Medical Image Segmentation</b> <br/>
+[Junfei Xiao]()<sup>1</sup>, [Lequan Yu]()<sup>2</sup>, [Zongwei Zhou](https://www.zongweiz.com/)<sup>1</sup>, [Yutong Bai]()<sup>1</sup>, [Lei Xing]()<sup>3</sup>, [Alan Yuille]()<sup>1</sup>, [Yuyin Zhou]()<sup>4</sup> <br/>
+<sup>1 </sup>Johns Hopkins University,   <sup>2 </sup>The University of Hong Kong,   <sup>3 </sup>Stanford University,   <sup>4 </sup>UC Santa Cruz <br/>
+MICCAI Workshop on Domain Adaptation and Representation Transfer (DART), 2022 <br/>
+<b>[Best Paper Award Honourable Mention]()</b>  <br/>
+[paper](https://arxiv.org/pdf/2103.15858.pdf) | [code](https://github.com/lambert-x/CateNorm) | [slides](https://www.zongweiz.com/_files/ugd/deaea1_c35eabb3d59f49ecbd39c42efd551f1c.pdf)
+
+
 ## Install/Check dependencies:
    ```shell
     pip install requirements.txt
