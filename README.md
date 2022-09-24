@@ -1,10 +1,10 @@
-# CateNorm: Categorical Normalization for Robust Medical Image Segmentation
+# CateNorm
 
 ## Paper
-This repository provides the official implementation of training Models Genesis as well as the usage of the pre-trained Models Genesis in the following paper:
+This repository provides the official implementation of training CateNorm in the following paper:
 
 <b>CateNorm: Categorical Normalization for Robust Medical Image Segmentation</b> <br/>
-[Junfei Xiao]()<sup>1</sup>, [Lequan Yu]()<sup>2</sup>, [Zongwei Zhou](https://www.zongweiz.com/)<sup>1</sup>, [Yutong Bai]()<sup>1</sup>, [Lei Xing]()<sup>3</sup>, [Alan Yuille]()<sup>1</sup>, [Yuyin Zhou]()<sup>4</sup> <br/>
+[Junfei Xiao](https://lambert-x.github.io/)<sup>1</sup>, [Lequan Yu](https://yulequan.github.io/)<sup>2</sup>, [Zongwei Zhou](https://www.zongweiz.com/)<sup>1</sup>, [Yutong Bai](https://scholar.google.com/citations?user=N1-l4GsAAAAJ&hl=en)<sup>1</sup>, [Lei Xing](https://profiles.stanford.edu/lei-xing)<sup>3</sup>, [Alan Yuille](https://scholar.google.com/citations?user=FJ-huxgAAAAJ&hl=en&oi=ao)<sup>1</sup>, [Yuyin Zhou](https://yuyinzhou.github.io/)<sup>4</sup> <br/>
 <sup>1 </sup>Johns Hopkins University,   <sup>2 </sup>The University of Hong Kong,   <sup>3 </sup>Stanford University,   <sup>4 </sup>UC Santa Cruz <br/>
 MICCAI Workshop on Domain Adaptation and Representation Transfer (DART), 2022 <br/>
 <b>[Best Paper Award Honourable Mention]()</b>  <br/>
