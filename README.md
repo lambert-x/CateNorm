@@ -123,10 +123,12 @@ To evaluate the model and save predictions, run:
 ## Citations
 
 ```bibtex
-@article{xiao2021dualnorm,
-  title={DualNorm-UNet: Incorporating Global and Local Statistics for Robust Medical Image Segmentation},
-  author={Xiao, Junfei and Yu, Lequan and Xing, Lei and Yuille, Alan and Zhou, Yuyin},
-  journal={arXiv},
-  year={2021}
+@inproceedings{xiao2022catenorm,
+  title={CateNorm: Categorical Normalization for Robust Medical Image Segmentation},
+  author={Xiao, Junfei and Yu, Lequan and Zhou, Zongwei and Bai, Yutong and Xing, Lei and Yuille, Alan and Zhou, Yuyin},
+  booktitle={MICCAI Workshop on Domain Adaptation and Representation Transfer},
+  pages={129--146},
+  year={2022},
+  organization={Springer}
 }
 ```
